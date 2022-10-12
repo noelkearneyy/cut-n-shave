@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Monda&family=Source+Sans+Pro&display=swap');
+
+.nav-bar-header-btn {
+    background-color: inherit;
+    border: none;
+    height: min-content;
+}
+
+.nav-bar-header-btn * {
+    height: 1.5rem;
+    fill: white;
+}
+
+.nav-bar-header-title{
+    color: white;
+    text-align: center;
+}
+
+.homepage-header * {
+    margin-top: 0.5rem;
+
+}
+
+.homepage-intro-container {
+    height: 100vh;
+    /* background-color: pink; */
+    background-image: url(./imgs/homepage-intro.jpg);
+    background-size: cover;
+}
+
+.homepage-intro-content{
+    /* position: absolute;
+    min-height: 100%; */
+}
+
+.white-btn {
+    background-color: white;
+    border: none;
+    padding: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-size: 0.75em;
+    font-weight: bold;
+}
+
+.white-btn:hover{
+    background-color: black;
+    color: white;
+}
+
+.homepage-into-header{
+    color: white;
+    text-align: center;
+    font-family: 'Monda', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+}
+
+.homepage-intro-btn{
+    max-width: min-content;
+}
+
+.homepage-down-btn {
+    background-color: transparent;
+    border: none;
+    color: white;
+}
+
+.homepage-down-btn * {
+    height: 1.5rem;
+}
+
+.homepage-about-us {
+    height: 80vh;
+}
