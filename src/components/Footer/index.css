@@ -1,0 +1,9 @@
+.footer-container {
+    min-height: 40vh;
+    background-color: rgb(226, 226, 226);
+}
+
+.align-right {
+    display: flex;
+    justify-content: end;
+}

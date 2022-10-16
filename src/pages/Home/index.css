@@ -1,9 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Monda&family=Source+Sans+Pro&display=swap');
 
+body {
+    font-family: 'Monda', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    overflow-x: hidden;
+}
+
+.header-container {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    /* align-items: flex-start; */
+    /* justify-content: start; */
+}
+
 .nav-bar-header-btn {
     background-color: inherit;
     border: none;
     height: min-content;
+    margin-left: 1em;
+    margin-right: 1em;
 }
 
 .nav-bar-header-btn * {
@@ -16,17 +32,45 @@
     text-align: center;
 }
 
+.homepage-header {
+    /* position: relative; */
+    /* top: 0; */
+}
+
 .homepage-header * {
     margin-top: 0.5rem;
+}
 
+.centered-container{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
 }
 
 .homepage-intro-container {
+    width: 100%;
+    margin: 0;
     height: 100vh;
     /* background-color: pink; */
-    background-image: url(./imgs/homepage-intro.jpg);
+    /* background-image: url(./imgs/homepage-intro.jpg); */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imgs/homepage-intro.jpg);
     background-size: cover;
+    /* align-self: flex-end; */
 }
+
+.homepage-intro-btns-row {
+    margin-top: 1em;
+}
+
+.homepage-intro-down-btn {
+    
+}
+
+/* .homepage-intro-btns-col {
+    align-self: center;
+    background-color: purple;
+} */
 
 .homepage-intro-content{
     /* position: absolute;
@@ -37,10 +81,11 @@
     background-color: white;
     border: none;
     padding: 1em;
-    padding-left: 2em;
-    padding-right: 2em;
-    font-size: 0.75em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    font-size: 0.85em;
     font-weight: bold;
+    margin-right: 1em;
 }
 
 .white-btn:hover{
@@ -48,16 +93,10 @@
     color: white;
 }
 
-.homepage-into-header{
-    color: white;
+.homepage-intro-header{
     text-align: center;
-    font-family: 'Monda', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: bold;
-}
-
-.homepage-intro-btn{
-    max-width: min-content;
+    color: white;
+    font-weight: bold;   
 }
 
 .homepage-down-btn {
@@ -70,6 +109,108 @@
     height: 1.5rem;
 }
 
-.homepage-about-us {
+.homepage-brief-about-us-container {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    padding: 5em;
+}
+
+.spacer-block {
+    display: inline-block;
+    min-width: 7em;
+    min-height: 0.75em;
+    background-color: black;
+}
+
+.bold-font {
+    font-weight: bold;
+}
+
+.homepage-brief-about-us-col * {
+    padding: 1em;
+}
+
+.square {
     height: 80vh;
+}
+
+.grey-square {
+    background-color: rgb(226, 226, 226);
+    min-height: 80vh;
+    padding: 4em;
+}
+
+.homepage-square-img-one {
+    /* background: url(./imgs/homepage-square-img-one.jpg);
+    background-size: cover; */
+    min-height: 80vh;
+    padding: 0;
+}
+
+.fit-image {
+    height: 100%;
+    width: 100%;
+}
+
+.homepage-square-img-two {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imgs/homepage-square-img-two.jpg);
+    background-size: cover;
+    color: white;
+    padding: 4em;
+    min-height: 80vh;
+}
+
+.homepage-square-img-three {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imgs/homepage-square-img-three.jpg);
+    background-size: cover;
+    color: white;
+    padding: 4em;
+    min-height: 80vh;
+}
+
+.black-btn {
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    padding: 1em;
+    padding-left: 3.5em;
+    padding-right: 3.5em;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.black-btn:hover{
+    background-color: white;
+    color: black;
+}
+
+.grey-background {
+    background-color: rgb(226, 226, 226);;
+}
+
+.black-divider-container {
+    min-height: 15vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+
+.fit-black-btn {
+    padding: 2%;
+    min-width: 100%;
+
+    background-color: black;
+    color: white;
+    border: 1px solid black;
+    font-size: 2em;
+    font-weight: bold;
+    margin-right: 1em;
+}
+
+.fit-black-btn:hover {
+    background-color: white;
+    color: black;
 }

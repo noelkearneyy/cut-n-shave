@@ -5,11 +5,35 @@ import Stack from 'react-bootstrap/Stack';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faXmark } from '@fortawesome/free-solid-svg-icons';
 import { faFacebook, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import {
+    Link
+  } from "react-router-dom"
 
 import './index.css';
 
 const NavBar = (props) => {
-    const pages = ['Home', 'Who We Are', 'Gallery', 'Shop', 'Contact Us', 'Trade Account'];
+    const pages = [
+        {
+            page: 'Home',
+            link: '/',
+        },
+        {
+            page: 'Who We Are',
+            link: '/about_us',
+        },
+        {
+            page: 'Gallery',
+            link: '/gallery',
+        }, 
+        {
+            page: 'Services',
+            link: '/services'
+        },
+        {
+            page: 'Contact Us',
+            link: '/contact_us',
+        },
+        ];
     const socials = [
         {
             name: 'Facebook',
@@ -46,9 +70,7 @@ const NavBar = (props) => {
         <Stack gap={3}>
             <div className='row nav-bar-btn-container'>
         {pages.map((page)=>{
-
-            return <button className='nav-bar-btn'>{page}</button>
-
+            return <Link to={page.link} className='nav-bar-btn'>{page.page}</Link>
         })} 
             </div>
         </Stack>
