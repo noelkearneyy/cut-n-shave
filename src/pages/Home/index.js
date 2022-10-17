@@ -6,12 +6,42 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 
 import BarberShopImg from './imgs/homepage-square-img-one.jpg';
+import ImgOne from './imgs/gallery-preview/gallery-preview-one.jpg';
+import ImgTwo from './imgs/gallery-preview/gallery-preview-two.jpg';
+import ImgThree from './imgs/gallery-preview/gallery-preview-three.jpg';
+import ImgFour from './imgs/gallery-preview/gallery-preview-four.jpg';
 
 import './index.css';
-import MainHeader from "../../components/Header";
-import Footer from "../../components/Footer";
+import MainHeader from '../../components/Header';
+import Footer from '../../components/Footer';
+import { useState } from "react";
+
 
 const HomePage = () => {
+
+    const [galleryPreviewImagesData, setGalleryPreviewImagesData] = useState([
+        {
+            id: 0,
+            image: ImgOne,
+        },
+        {
+            id: 1,
+            image: ImgTwo,
+        },
+        {
+            id: 2,
+            image: ImgThree,
+        },
+        {
+            id: 3,
+            image: ImgFour,
+        },
+    ]);
+
+    const galleryPreviewImagesElements = galleryPreviewImagesData.map((img) => 
+        <img key={img.id} className='homepage-gallery-img' src={img.image} alt='gallery item'/>
+    );
+
     return (
       <>
       
@@ -56,11 +86,11 @@ const HomePage = () => {
             </Col>
         </Row>
        </Container>
+       {/* sm={1} lg={2}  */}
+       <Container fluid >
 
-       <Container fluid className=''>
-
-        <Row sm={1} md={2} className='text-center'>
-            <Col className='grey-square centered-container'>
+        <Row className='text-center'>
+            <Col className='grey-square centered-container' md={6}>
             <h2 className='bold-font'>BOOK AN APPOINTMENT</h2>
             <p>Book an appointment here or navigate to Contact Us.</p>
             <div>
@@ -69,33 +99,72 @@ const HomePage = () => {
             </div>
             </Col>
 
-            <Col className='homepage-square-img-one'><img className='fit-image' src={BarberShopImg} alt='barber-shop'/></Col>
+            <Col className='homepage-square-img-one centered-container' md={6}>
+            <h2 className='bold-font'>OPENING TIMES</h2>
+            <div className='row'>
+                <div className='col font-bold'>
+                    <p>MONDAY...</p>
+                    <p>TUESDAY...</p>
+                    <p>WEDNESDAY...</p>
+                    <p>THURSDAY...</p>
+                    <p>FRIDAY...</p>
+                    <p>SATURDAY...</p>
+                    <p>SUNDAY...</p>
+                </div>
+                <div className='col'>
+                   <p>08:00-17:00</p>
+                   <p>08:00-17:00</p>
+                   <p>08:00-17:00</p>
+                   <p>08:00-17:00</p>
+                   <p>08:00-17:00</p>
+                   <p>08:00-17:00</p>
+                   <p>CLOSED</p>
+                </div>
+            </div>
+            </Col>
 
-            <Col className='square homepage-square-img-two centered-container'>
+            <Col className='square homepage-square-img-two centered-container' md={6}>
             <h2 className='bold-font'>PRODUCTS</h2>
             <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer in orci a ligula placerat semper. Quisque diam dolor, facilisis ut eleifend sit amet, faucibus id ipsum. Duis nec malesuada ante. Phasellus eleifend libero risus, aliquam volutpat diam ornare a. Maecenas dui est, blandit id nulla at, tempor consequat eros. Aliquam vitae odio sed augue placerat vestibulum. Aenean interdum non nulla quis pellentesque.</p>
             </Col>
 
-            <Col className='homepage-square-img-three centered-container'>
+            <Col className='homepage-square-img-three centered-container' md={6}>
             <h2 className='bold-font'>SERVICES</h2>
             <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer in orci a ligula placerat semper. Quisque diam dolor, facilisis ut eleifend sit amet, faucibus id ipsum. Duis nec malesuada ante. Phasellus eleifend libero risus, aliquam volutpat diam ornare a. Maecenas dui est, blandit id nulla at, tempor consequat eros. Aliquam vitae odio sed augue placerat vestibulum. Aenean interdum non nulla quis pellentesque.</p>
             <div>
             <button className='white-btn'>VIEW SERVICES</button>
             </div>
             </Col>
+
         </Row>
        </Container>
 
-       <Container fluid className='grey-background homepage-brief-about-us-container' >
-       <Row>
-            <Col><span className='spacer-block'></span></Col>
-        </Row>
+       <Container fluid className='grey-background homepage-gallery-container' >
+       
         <Row>
-            <Col className='text-center homepage-brief-about-us-col'>
-            <h2 className='bold-font'>GALLERY</h2>
-            
+            <Col>
+                <span className='spacer-block'></span>
             </Col>
         </Row>
+        
+        <Row>
+            <Col className='text-center'>
+            <h2 className='bold-font'>GALLERY</h2>
+            </Col>
+        </Row>
+        
+        <Row>
+            <Col className="text-center">
+                {galleryPreviewImagesElements}
+            </Col>
+        </Row>
+        
+        <Row>
+            <Col className='homepage-brief-about-us-col'>
+                <button className='black-btn margin-0'>VIEW MORE</button>
+            </Col>
+        </Row>
+
        </Container>
 
        <Container fluid >

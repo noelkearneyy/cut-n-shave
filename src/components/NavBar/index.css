@@ -60,6 +60,10 @@
     color: white;
 }
 
+.social-icon-btn svg {
+    margin:0;
+}
+
 .social-icon-btn:hover {
     background-color: inherit;
     fill: black;
