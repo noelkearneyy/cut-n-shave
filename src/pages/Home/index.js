@@ -1,6 +1,3 @@
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faBars, faUser, faShoppingCart, faAngleDown } from '@fortawesome/free-solid-svg-icons';
-// import { useState } from "react";
 import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
@@ -14,11 +11,13 @@ import './index.css';
 import MainHeader from '../../components/Header';
 import Footer from '../../components/Footer';
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 
 const HomePage = () => {
 
-    const [galleryPreviewImagesData, setGalleryPreviewImagesData] = useState([
+    // setGalleryPreviewImagesData can be added if changing state dynamically
+    const [galleryPreviewImagesData] = useState([
         {
             id: 0,
             image: ImgOne,
@@ -57,8 +56,8 @@ const HomePage = () => {
             <Row className='justify-content-sm-center homepage-intro-btns-row'>
             {/* className='homepage-intro-btns-col' */}
                 <Col sm='auto'>
-                    <button className='white-btn'>BOOK AN APPOINTMENT</button>
-                    <button className='white-btn'>CONTACT US</button>
+                    <Link className='white-btn link-btn' to='https://web.getsquire.com/' target='_blank'>BOOK AN APPOINTMENT</Link>
+                    <Link className='white-btn link-btn' to='/contact_us'>CONTACT US</Link>
                 </Col>
             </Row>
 
@@ -93,8 +92,8 @@ const HomePage = () => {
             <h2 className='bold-font'>BOOK AN APPOINTMENT</h2>
             <p>Book an appointment here or navigate to Contact Us.</p>
             <div>
-            <button className='black-btn'>BOOK AN APPOINTMENT</button>
-            <button className='black-btn'>CONTACT US</button>
+            <Link className='black-btn link-btn'>BOOK AN APPOINTMENT</Link>
+            <Link className='black-btn link-btn' to='/contact_us'>CONTACT US</Link>
             </div>
             </Col>
 
@@ -131,7 +130,7 @@ const HomePage = () => {
             <h2 className='bold-font'>SERVICES</h2>
             <p>Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Integer in orci a ligula placerat semper. Quisque diam dolor, facilisis ut eleifend sit amet, faucibus id ipsum. Duis nec malesuada ante. Phasellus eleifend libero risus, aliquam volutpat diam ornare a. Maecenas dui est, blandit id nulla at, tempor consequat eros. Aliquam vitae odio sed augue placerat vestibulum. Aenean interdum non nulla quis pellentesque.</p>
             <div>
-            <button className='white-btn'>VIEW SERVICES</button>
+            <Link className='white-btn link-btn' to='/services'>VIEW SERVICES</Link>
             </div>
             </Col>
 
@@ -160,7 +159,7 @@ const HomePage = () => {
         
         <Row>
             <Col className='homepage-brief-about-us-col'>
-                <button className='black-btn margin-0'>VIEW MORE</button>
+                <Link className='black-btn margin-0 link-btn' to='/gallery'>VIEW MORE</Link>
             </Col>
         </Row>
 

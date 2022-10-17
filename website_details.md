@@ -23,6 +23,16 @@ https://www.pexels.com/photo/man-holding-mirror-behind-man-897273/
 
 https://www.pexels.com/photo/man-having-a-haircut-1813346/
 
+## Page Header Title Background Image -
+
+https://unsplash.com/photos/EW_rqoSdDes
+
+## About us Staff Images - 
+https://unsplash.com/photos/YyqdjtemqIU
+https://unsplash.com/photos/aoB1B2kkyIw
+https://unsplash.com/photos/WZope9SPDio
+https://unsplash.com/photos/ewpTmN9pQJM
+
 
 Book an appointment - https://web.getsquire.com/
 

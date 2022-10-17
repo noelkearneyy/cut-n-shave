@@ -1,0 +1,30 @@
+.contact-us-content-container {
+    min-height: 70vh;
+}
+
+.fit-container {
+    min-height: 100%;
+}
+
+.contact-us-side-contents {
+    min-width: 100%;
+    min-height: 100%;
+    justify-content: center;
+}
+
+.contact-us-col {
+    min-height: 70vh;
+}
+
+.contact-us-form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1em;
+    max-width: 60%;
+    justify-content: center;
+}
+
+.contact-us-form-btn {
+    align-self: flex-end;
+    margin: 0;
+}

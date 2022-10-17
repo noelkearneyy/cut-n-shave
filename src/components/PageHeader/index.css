@@ -1,0 +1,18 @@
+.page-header {
+    width: 100%;
+    margin: 0;
+    height: 50vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(./imgs/about-us-header.jpg);
+    background-size: cover;
+    background-position: center; 
+    background-color: pink;
+    color: white;
+}
+
+.page-header-title {
+    text-align: center;
+}
+
+.page-header-title-row {
+    min-height: 100%;
+}

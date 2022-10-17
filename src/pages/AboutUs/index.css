@@ -1,0 +1,23 @@
+.staff-icon {
+    color: white;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+
+}
+
+.staff-icon-img {
+    width: 160px; 
+    height: 160px;
+    border-radius: 50%;
+    border: 8px solid white;
+    text-align: center;
+    align-self: center;
+}
+
+.staff-icon:hover, .staff-icon:hover .staff-icon-img {
+    border-color: black;
+    color: black;
+}
