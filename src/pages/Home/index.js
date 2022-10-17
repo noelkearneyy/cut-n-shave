@@ -5,7 +5,6 @@ import Col from "react-bootstrap/esm/Col";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 
-import BarberShopImg from './imgs/homepage-square-img-one.jpg';
 import ImgOne from './imgs/gallery-preview/gallery-preview-one.jpg';
 import ImgTwo from './imgs/gallery-preview/gallery-preview-two.jpg';
 import ImgThree from './imgs/gallery-preview/gallery-preview-three.jpg';
