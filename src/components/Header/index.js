@@ -2,8 +2,11 @@ import NavBar from "../../components/NavBar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faUser, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 import { useState } from "react";
+import Container from "react-bootstrap/esm/Container";
 import Col from "react-bootstrap/esm/Col";
 import Row from "react-bootstrap/esm/Row";
+
+import './index.css';
 
 const MainHeader = () => {
     const [showNavBar, setShowNavBar] = useState(false);
@@ -13,31 +16,32 @@ const MainHeader = () => {
     }
 
     return (
-        <>
+        <Container fluid>
+        
         {showNavBar && <NavBar setShowNavBar={setShowNavBar} />}
-        <div className='header-container'>
-        <Row className='homepage-header align-items-center'>
+        {/* <div className='header-container'> */}
+        <Row className='homepage-header header-container'>
         <Col>
         <button className='nav-bar-header-btn' onClick={handleShowNavBar}>
         <FontAwesomeIcon icon={faBars} />
         </button>
         </Col>
-        
-        <Col>
+    
+        <Col className='nav-bar-heder-center'>
         <h1 className='nav-bar-header-title'>CUT 'N' SHAVE</h1>
         </Col>
 
-        <Col className='d-flex justify-content-end'>
+        {/* <Col className='d-flex justify-content-end'>
         <button className='nav-bar-header-btn'>
         <FontAwesomeIcon icon={faUser}/>
         </button>
         <button className='nav-bar-header-btn'>
         <FontAwesomeIcon icon={faShoppingCart}/>
         </button>
-        </Col>
+        </Col> */}
     </Row>
-    </div>
-    </>
+    {/* </div> */}
+    </Container>
     );
 }
 

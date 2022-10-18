@@ -1,6 +1,13 @@
 # Barber Website Details 
 
+## Fonts 
+
+Oswald Bold 700 - Shop Name - https://fonts.google.com/specimen/Oswald?sort=popularity&preview.text=CUT%20%27N%27%20SHAVE&preview.text_type=custom 
+
+
 https://fonts.google.com/specimen/Bebas+Neue
+
+## IMAGES
 
 Intro background image - https://www.pexels.com/photo/men-having-their-haircut-1813272/
 

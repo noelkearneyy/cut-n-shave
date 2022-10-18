@@ -1,0 +1,61 @@
+
+.header-container {
+    position: absolute;
+    /* top: 0; */
+    width: 100%;
+    /* align-items: flex-start; */
+    /* justify-content: start; */
+}
+
+.homepage-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homepage-intro-btns-row {
+    /* margin-top: 1em; */
+}
+
+/* .homepage-header * {
+    margin-top: 1rem;
+} */
+
+.homepage-header div {
+    max-width: fit-content;
+}
+
+/* .homepage-header div:nth-child(2) {
+    background-color: pink;
+    justify-self: auto;
+} */
+
+.nav-bar-heder-center {
+    align-self: center;
+}
+
+.nav-bar-header-title{
+    color: white;
+    text-align: center;
+    margin: 0;
+    font-family: 'Caveat', cursive;
+    font-family: 'Manrope', sans-serif;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700;
+}
+
+.nav-bar-header-btn {
+    background-color: inherit;
+    border: none;
+    height: min-content;
+    display: flex;
+    align-content: center;
+    /* margin-left: 1em; */
+    /* margin-right: 1em; */
+    /* align-self: flex-start; */
+}
+
+.nav-bar-header-btn * {
+    height: 2rem;
+    fill: white;
+}

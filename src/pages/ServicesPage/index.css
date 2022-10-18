@@ -1,0 +1,9 @@
+.service-icon {
+    max-width: 60%;
+}
+
+.services-menu-col {
+    /* background-color: pink; */
+    display: flex;
+    justify-content: center;
+}
