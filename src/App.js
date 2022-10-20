@@ -8,7 +8,6 @@ import ContactUs from "./pages/ContactUs";
 import NotFound404 from "./pages/NotFound404";
 
 import "animate.css/animate.min.css";
-import { useEffect } from "react";
 
 function App() { 
   
