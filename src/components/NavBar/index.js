@@ -12,6 +12,7 @@ import {
 import './index.css';
 
 const NavBar = (props) => {
+
     const pages = [
         {
             page: 'Home',
@@ -34,6 +35,7 @@ const NavBar = (props) => {
             link: '/contact_us',
         },
         ];
+
     const socials = [
         {
             name: 'Facebook',
@@ -50,7 +52,7 @@ const NavBar = (props) => {
             link: 'www.twitter.com',
             icon: <FontAwesomeIcon icon={faTwitter}/>,
         }
-    ]
+    ];
 
     const handleClose = ()=>{
         props.setShowNavBar(false);
@@ -69,17 +71,17 @@ const NavBar = (props) => {
         
         <Stack gap={3}>
             <div className='row nav-bar-btn-container'>
-        {pages.map((page)=>{
-            return <Link to={page.link} className='nav-bar-btn'>{page.page}</Link>
+        {pages.map((page, index)=>{
+            return <Link key={index} to={page.link} className='nav-bar-btn'>{page.page}</Link>
         })} 
             </div>
         </Stack>
 
         <Row className='social-icon-btn-row justify-content-center'>
             {
-                socials.map((social)=>{
+                socials.map((social, index)=>{
                     return (
-                    <Col className='social-icon-btn-col'><button className='social-icon-btn' aria-label={social.name}>{social.icon}</button></Col>
+                    <Col key={index} className='social-icon-btn-col'><button className='social-icon-btn' aria-label={social.name}>{social.icon}</button></Col>
                     )
                 })
             }

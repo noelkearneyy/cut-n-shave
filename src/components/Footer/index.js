@@ -8,6 +8,7 @@ import './index.css';
 import { Link } from "react-router-dom";
 
 const Footer = () =>{
+    
     const socials = [
         {
             name: 'Facebook',
@@ -24,22 +25,21 @@ const Footer = () =>{
             link: 'www.twitter.com',
             icon: <FontAwesomeIcon icon={faTwitter}/>,
         }
-    ]
+    ];
+
     return (
         <Container fluid className='footer-container'>
             <Row className='footer-row'>
-                <Col sm={12} md={6} className='footer-left-side'>
+                <Col sm={6} md={6} className='footer-left-side transition-in'>
                     <h2 className='footer-shop-name font-bold'>CUT 'N' SHAVE</h2>
                     <p>32 Lisburn Road, Belfast, BT8 LMK</p>
                     <p className='font-bold'>PHONE: +44 720339 4323</p>
                     <p className='font-bold'>EMAIL: email@cutnshave.com</p>
                 </Col>
 
-                <Col sm={12} md={6} className='footer-right-side'>
-                {/* <Row>
-                    <Col> */}
-                    <Row className='row footer-opening-times-container'>
-                        <Col className='footer-opening-times-days-col' sm={2}>
+                <Col sm={6} md={6} className='footer-right-side transition-in'>
+                    <Row className='footer-opening-times-container'>
+                        <Col className='footer-opening-times-days-col col-width-min'>
                             <p>MONDAY...</p>
                             <p>TUESDAY...</p>
                             <p>WEDNESDAY...</p>
@@ -48,7 +48,7 @@ const Footer = () =>{
                             <p>SATURDAY...</p>
                             <p>SUNDAY...</p>
                         </Col>
-                        <Col sm={2} className='text-align-right col-width-min'>
+                        <Col className='text-align-right col-width-min'>
                             <p>08:00-17:00</p>
                             <p>08:00-17:00</p>
                             <p>08:00-17:00</p>
@@ -61,22 +61,20 @@ const Footer = () =>{
                     <div className='footer-socials-container'>
                         <p className='margin-0 font-bold'>FOLLOW US</p>
                         {
-                socials.map((social)=>{
+                socials.map((social, index)=>{
                     return (
-                    <button className='social-icon-btn' aria-label={social.name}>{social.icon}</button>
+                    <button key={index} className='social-icon-btn' aria-label={social.name}>{social.icon}</button>
                     )
                 })
             } 
             </div>      
-            {/* </Col>
-                    </Row> */}
-                    {/* <Row> */}
+          
                     <div className='footer-info-container font-bold'>
                         <Link>Terms and Conditions</Link> 
                         <p className='margin-0 '>|</p> 
                         <Link>Privacy Policy</Link>
                     </div>
-                    {/* </Row>  */}
+                   
                 </Col>
             </Row>
         </Container>

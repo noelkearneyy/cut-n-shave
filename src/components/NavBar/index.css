@@ -13,6 +13,7 @@
     background-color: inherit;
     border: none;
     margin-top: 1em;
+    transition: all 0.5s ease;
 }
 
 .nav-bar-close-btn * {
@@ -36,6 +37,7 @@
     width: 90%;
     text-decoration: none;
     color: black;
+    transition: all 0.5s ease;
 }
 
 .nav-bar-btn:hover {
@@ -58,6 +60,7 @@
     border: none;
     background-color: black;
     color: white;
+    transition: all 0.5s ease;
 }
 
 .social-icon-btn svg {
@@ -66,6 +69,7 @@
 
 .social-icon-btn:hover {
     background-color: inherit;
-    fill: black;
+    /* fill: black; */
+    border: 1px solid white;
 }
 

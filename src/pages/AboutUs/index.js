@@ -12,6 +12,7 @@ import StaffImgFour from './imgs/about-us-staff-four.jpg';
 
 import './index.css';
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const AboutUs = () => {
     const staffMembers = [
@@ -45,10 +46,27 @@ const AboutUs = () => {
     },
 ];
 
+useEffect(()=>{
+    const transitionElements = document.querySelectorAll('.transition-in');
+    const observer = new IntersectionObserver(enteries=> {
+        enteries.forEach(entry=>{
+            entry.target.classList.toggle('show', entry.isIntersecting)
+            // Will stop animation when scrolling up
+            if(entry.isIntersecting) observer.unobserve(entry.target)
+        })
+    }, {
+        threshold: 0.8,
+    });
+
+    transitionElements.forEach(element => {
+        observer.observe(element);
+    })
+})
+
     const staffIcons = staffMembers.map((staff)=>{
         return (
             <Col className='staff-icon justify-content-center' key={staff.id}>
-                <img className='staff-icon-img text-center' src={staff.img}/>
+                <img className='staff-icon-img text-center' src={staff.img} alt='staff-member'/>
                 <h2 className='text-center font-bold'>{staff.name.toUpperCase()}</h2>
                 <h3 className='text-center font-bold'>{staff.jobTitle.toUpperCase()}</h3>
                 <p className='text-center'>{staff.description}</p>
@@ -62,14 +80,14 @@ const AboutUs = () => {
        <Container className='homepage-gallery-container'>
        
        <Row>
-            <Col>
+            <Col className='text-center transition-in'>
                 <span className='spacer-block'></span>
+                <h2 className='bold-font'>THE TEAM</h2>
             </Col>
         </Row>
 
         <Row>
-            <Col className='text-center'>
-                <h2 className='bold-font'>THE TEAM</h2>
+            <Col className='text-center row-gap transition-in'>
                 <p>Ut quis tincidunt justo. Phasellus posuere pellentesque magna, nec dictum nisl porttitor ac. Pellentesque sit amet erat in arcu sodales dignissim vitae sit amet ligula. Donec eget rutrum nibh. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam non sodales dolor, at porttitor nunc. Aenean consectetur risus a massa egestas, nec porta magna pulvinar.</p>
                 <p>Mauris leo erat, tempor quis ante sit amet, pellentesque molestie dolor. Donec iaculis vestibulum auctor. Curabitur ut congue neque. Maecenas cursus, magna vitae egestas posuere, nisi magna dignissim ligula, sit amet varius ante urna non erat. Phasellus rhoncus enim mauris, et venenatis lectus vestibulum sit amet. Nunc iaculis lorem vel tellus congue vulputate. Curabitur enim dui, tempor ac maximus ut, ullamcorper eu risus. Morbi a dictum dui. Duis convallis elit a velit aliquet, vel ultrices leo bibendum. Etiam dignissim, odio quis rhoncus sodales, enim sem accumsan mi, quis auctor mauris ipsum non tellus. Nunc a varius diam, in ullamcorper nisl. Duis sagittis nisl vel leo finibus vestibulum. Ut ligula tortor, posuere eu porttitor porttitor, vehicula eget ipsum. Sed vel tortor ac ipsum sodales congue. </p>
             </Col>
@@ -78,7 +96,7 @@ const AboutUs = () => {
        </Container>
 
        <Container fluid className='homepage-gallery-container grey-background'>
-            <Row>
+            <Row className='row-gap-row transition-in'>
                 {staffIcons}
             </Row>
        </Container>
@@ -86,7 +104,7 @@ const AboutUs = () => {
        <Container fluid >
         <Row className='black-divider-container'>
             <Col>
-            <Link className='fit-black-btn link-btn' to='/gallery'>GALLERY</Link>
+            <Link className='fit-black-btn link-btn transition-in' to='/gallery'>GALLERY</Link>
             </Col>
         </Row>
        </Container>

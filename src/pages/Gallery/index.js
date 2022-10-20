@@ -8,15 +8,32 @@ import Carousel from 'react-bootstrap/Carousel';
 
 import './index.css';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const Gallery = () => {
+    useEffect(()=>{
+        const transitionElements = document.querySelectorAll('.transition-in');
+        const observer = new IntersectionObserver(enteries=> {
+            enteries.forEach(entry=>{
+                entry.target.classList.toggle('show', entry.isIntersecting)
+                // Will stop animation when scrolling up
+                if(entry.isIntersecting) observer.unobserve(entry.target)
+            })
+        }, {
+            threshold: 0.8,
+        });
+    
+        transitionElements.forEach(element => {
+            observer.observe(element);
+        })
+    })
     return (
     <>
         <PageHeader pageTitle='GALLERY' />
 
         <Container className='homepage-gallery-container'>
             <Row>
-                <Col>
+                <Col className='transition-in'>
                     <span className='spacer-block'></span>
                 </Col>
             </Row>
@@ -45,7 +62,7 @@ const Gallery = () => {
         <Container fluid >
         <Row className='black-divider-container'>
             <Col>
-            <Link className='fit-black-btn link-btn' to='/services'>SERVICES</Link>
+            <Link className='fit-black-btn link-btn transition-in' to='/services'>SERVICES</Link>
             </Col>
         </Row>
        </Container>

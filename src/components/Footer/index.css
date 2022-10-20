@@ -12,9 +12,7 @@
 .footer-left-side {
     display: flex;
     flex-direction: column;
-    /* height: 100%; */
     justify-content: center;
-    /* row-gap: 1em; */
 }
 
 .footer-shop-name {
@@ -60,7 +58,6 @@
 .footer-opening-times-container p {
     padding: 0;
     margin: 0;
-    /* text-align: end; */
 }
 
 .footer-socials-container {

@@ -6,7 +6,6 @@ body {
     overflow-x: hidden;
 }
 
-
 .centered-container{
     display: flex;
     flex-direction: column;
@@ -58,6 +57,7 @@ body {
     /* margin-right: 1em; */
     color: black;
     text-align: center;
+    transition: all 0.5s ease;
 }
 
 .white-btn:hover{
@@ -99,7 +99,7 @@ body {
     min-width: 7em;
     min-height: 0.75em;
     background-color: black;
-    /* margin-bottom: 0.5em; */
+    margin-bottom: 0.5em;
 }
 
 .bold-font {
@@ -172,7 +172,7 @@ body {
     padding-right: 3.5em;
     font-size: 0.85em;
     font-weight: bold;
-    /* margin-right: 1em; */
+    transition: all 0.5s ease;
 }
 
 .black-btn:hover{
@@ -190,7 +190,7 @@ body {
     align-items: center;
     align-content: stretch;
     padding: 4em;
-    row-gap: 2rem;
+    row-gap: 1rem;
 }
 
 .homepage-gallery-img {
@@ -216,6 +216,7 @@ body {
     font-weight: bold;
     margin-right: 1em;
     text-align: center;
+    transition: all 0.5s ease;
 }
 
 .fit-black-btn:hover {
@@ -230,4 +231,14 @@ body {
 .link-btn {
     text-decoration: none;
     display: inline-block;
+}
+
+.transition-in {
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.show {
+    opacity: 1;
+
 }

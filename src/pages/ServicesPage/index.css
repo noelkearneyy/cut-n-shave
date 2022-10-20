@@ -1,3 +1,4 @@
+
 .service-icon {
     max-width: 60%;
 }
@@ -6,4 +7,15 @@
     /* background-color: pink; */
     display: flex;
     justify-content: center;
+    /* row-gap: 1em; */
+}
+
+.services-quote-text {
+    color: darkslategrey;
+    font-weight: bold;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+    padding: 2em;
+    font-style: italic;
 }

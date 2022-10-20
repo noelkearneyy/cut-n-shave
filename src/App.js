@@ -7,7 +7,11 @@ import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
 import NotFound404 from "./pages/NotFound404";
 
-function App() {
+import "animate.css/animate.min.css";
+import { useEffect } from "react";
+
+function App() { 
+  
   return (
     <Routes>
       <Route path='/' element={<HomePage />}/>

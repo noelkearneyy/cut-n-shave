@@ -40,6 +40,9 @@ https://unsplash.com/photos/aoB1B2kkyIw
 https://unsplash.com/photos/WZope9SPDio
 https://unsplash.com/photos/ewpTmN9pQJM
 
+## OnScroll Animation AOS.JS
+https://github.com/michalsnik/aos
+
 
 Book an appointment - https://web.getsquire.com/
 

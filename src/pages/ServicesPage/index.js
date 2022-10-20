@@ -11,9 +11,22 @@ import { useEffect, useState } from 'react';
 const Services = () => {
     const [services, setServices] = useState([]);
 
-    
-
     useEffect(()=>{
+            const transitionElements = document.querySelectorAll('.transition-in');
+            const observer = new IntersectionObserver(enteries=> {
+                enteries.forEach(entry=>{
+                    entry.target.classList.toggle('show', entry.isIntersecting)
+                    // Will stop animation when scrolling up
+                    if(entry.isIntersecting) observer.unobserve(entry.target)
+                })
+            }, {
+                threshold: 1,
+            });
+        
+            transitionElements.forEach(element => {
+                observer.observe(element);
+            });
+
         const servicesMenu = [
             {
                 id: 0,
@@ -84,8 +97,8 @@ const Services = () => {
         return (
             <Col sm={12} md={6} className='text-center services-menu-col' key={service.id}>
             <div className='service-icon'>
-            <h3 className='font-bold'>{service.title} {service.price}</h3>
-            <p>{service.description}</p>
+            <h3 className='font-bold transition-in'>{service.title} {service.price}</h3>
+            <p className='transition-in'>{service.description}</p>
             </div>
             </Col>
         );
@@ -97,12 +110,12 @@ const Services = () => {
 
         <Container fluid className='homepage-gallery-container'>
             <Row>
-                <Col className='text-center'>
+                <Col className='text-center transition-in'>
                     <span className='spacer-block'></span>
                     <h2 className='font-bold'>THE MENU</h2>
                 </Col>
             </Row>
-                <Row> 
+                <Row className='row-gap-row'> 
                     { servicesElement }
                 </Row>
             </Container>
@@ -110,7 +123,7 @@ const Services = () => {
             <Container fluid >
         <Row className='grey-background'>
             <Col>
-            <p>To make a fine gentleman, several trades are required, but chiefly a barber. - Oliver Goldsmith</p>
+            <p className='services-quote-text transition-in'>To make a fine gentleman, several trades are required, but chiefly a barber. <br /> - Oliver Goldsmith</p>
             </Col>
         </Row>
        </Container>
@@ -118,7 +131,7 @@ const Services = () => {
         <Container fluid >
         <Row className='black-divider-container'>
             <Col>
-            <Link className='fit-black-btn link-btn' to='/contact_us'>CONTACT US</Link>
+            <Link className='fit-black-btn link-btn transition-in' to='/contact_us'>CONTACT US</Link>
             </Col>
         </Row>
        </Container>
