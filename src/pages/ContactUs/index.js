@@ -56,8 +56,8 @@ const ContactUs = () => {
             returnedArray.push('CLOSED');
         }
 
-        returnedArray.push(selectedDay.open + '-' + selectedDay.close);
-        returnedArray.push(selectedDay.day);
+            returnedArray.push(selectedDay.open + '-' + selectedDay.close);
+            returnedArray.push(selectedDay.day);
 
         return returnedArray;
     }
@@ -123,8 +123,8 @@ const ContactUs = () => {
             {
                 id: 0,
                 day: 'Sunday',
-                open: 'closed',
-                close: 'closed',
+                open: '',
+                close: '',
             },
         ];
 

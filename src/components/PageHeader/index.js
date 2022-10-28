@@ -3,7 +3,7 @@ import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 
 import './index.css';
-import MainHeader from "../../components/Header";
+import MainHeader from "../Header";
 import { useEffect } from "react";
 
 const PageHeader = (props) => {
